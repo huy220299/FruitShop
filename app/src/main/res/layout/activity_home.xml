@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeActivity"
+    android:id="@+id/drawer_layout"
+    >
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/main_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="#79E187">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ImageButton
+                            android:background="#79E187"
+                            android:id="@+id/cart"
+                            android:layout_width="?attr/actionBarSize"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@mipmap/shopping_cart"
+                            android:padding="15dp"
+                            android:scaleType="fitXY"/>
+                        <ImageButton
+                            android:background="#79E187"
+                            android:id="@+id/search"
+                            android:layout_width="?attr/actionBarSize"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_alignParentTop="true"
+                            android:layout_toLeftOf="@id/cart"
+                            android:src="@mipmap/search"
+                            android:padding="15dp"
+                            android:scaleType="fitXY"/>
+                        <EditText
+                            android:id="@+id/edt_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_alignParentTop="true"
+                            android:layout_toLeftOf="@id/search"
+                            android:hint="Bạn tìm gì hôm nay?"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:background="@null"
+                            />
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="?attr/actionBarSize">
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/viewpager"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="50dp"
+                            android:layout_marginLeft="50dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="500dp"
+                            android:background="#FFFFFF"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hot Deal!"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:id="@+id/text_hotDeal"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="More!"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:textSize="24sp"
+                                android:textColor="#303F9F"
+                                android:id="@+id/text_hotDeal_more"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"/>
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:id="@+id/rv_hotDeal"
+                                app:layout_constraintTop_toBottomOf="@id/text_hotDeal"
+                                app:layout_constraintHeight_percent=".75"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="#DCDCDC"/>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="550dp"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="All Product"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:id="@+id/text_allProduct"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="More"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:textSize="24sp"
+                                android:textColor="#303F9F"
+                                android:id="@+id/text_allProduct_more"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"/>
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:id="@+id/rv_allProduct"
+                                app:layout_constraintTop_toBottomOf="@id/text_allProduct"
+                                app:layout_constraintHeight_percent=".75"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="#DCDCDC"/>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="500dp"
+                            android:background="#FFFFFFFF"
+
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Flash Sale"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:id="@+id/text_flashSale"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="More!"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:textSize="24sp"
+                                android:textColor="#47ECEC"
+                                android:id="@+id/text_flashSale_more"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"/>
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:id="@+id/rv_flashSale"
+                                app:layout_constraintTop_toBottomOf="@id/text_flashSale"
+                                app:layout_constraintHeight_percent=".75"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="#DCDCDC"/>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="500dp"
+                            android:background="#FFFFFFFF"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="For U"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:id="@+id/text_ForU"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="More"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:textSize="24sp"
+                                android:textColor="#47ECEC"
+                                android:id="@+id/text_hotDeal1_more"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"/>
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:id="@+id/rv_hotDeal1"
+                                app:layout_constraintTop_toBottomOf="@id/text_hotDeal1_more"
+                                app:layout_constraintHeight_percent=".75"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+                
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:menu="@menu/main_menu"
+            android:id="@+id/nav_view"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/header"
+            />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="200dp"
+    android:background="@drawable/item_cover"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    >
+
+        <ImageView
+            android:id="@+id/rv_allProduct_img"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="0dp"
+            android:src="@mipmap/facebook"
+            android:layout_gravity="top"
+            android:scaleType="fitXY"
+            android:padding="1dp"
+            android:contentDescription="@string/category" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/category"
+            android:id="@+id/rv_allProduct_name"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/category"
+            android:id="@+id/rv_allProduct_cost"
+            android:layout_gravity="start"
+            />
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            style="?android:attr/ratingBarStyleSmall"
+            />
+</LinearLayout>

@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">NavDrawer</string>
+    <string name="openNavDrawer">Navigation Drawer Open</string>
+    <string name="closeNavDrawer">Navigation Drawer Close</string>
+    <string name="Language">Language</string>
+    <string name="Discovery">Discovery</string>
+    <string name="darkmode">Dark mode</string>
+    <string name="Setting">Setting</string>
+    <string name="Logout">Log out</string>
+    <string name="my_number_is">Số điện thoại:</string>
+    <string name="phone_number">Số điện thoại</string>
+    <string name="phone_number_login_describe">mô tả</string>
+    <string name="button_continue">Tiếp tục</string>
+    <string name="invalid_phone_number">Invalid phone number.</string>
+    <string name="my_code_is">Mã xác nhận</string>
+
+
+    <string name="authentication_failed">Authentication failed.</string>
+    <string name="resend">RESEND</string>
+    <string name="code_sent">Code sent</string>
+    <string name="code_resent">Code resent!!</string>
+    <string name="loading">Loading</string>
+    <string name="quota_exceeded">Quota exceeded.</string>
+    <string name="wrong_code_message">Verify is wrong</string>
+    <string name="login_success">Login success</string>
+    <string name="login_failed">Login failed!!</string>
+    <string name="powered_by">Powered By</string>
+    <string name="category">Category</string>
+    <string name="AboutUs">About us</string>
+    <string name="topSale">Top Sale</string>
+    <string name="userName">userName</string>
+    <string name="email">Email</string>
+    <string name="number_phone">Number phone</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forget_password">Forget password</string>
+    <string name="username">UserName</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="Language_vietnam">Tiếng Việt</string>
+    <string name="vietnamese">Tiếng Việt</string>
+    <string name="English">Tiếng Anh</string>
+    <string name="japanese">Tiếng Nhật</string>
+    <string name="cost">cost</string>
+    <string name="Product_name">Product name</string>
+    <string name="Product_intro">Product_intro</string>
+    <string name="cart">cart</string>
+    <string name="home">home</string>
+    <string name="search">search</string>
+    <string name="same_product">Same Product</string>
+    <string name="buy">Buy</string>
+    <string name="Company">Company infomation</string>
+    <string name="Product_company">Company</string>
+    <string name="Description">Description</string>
+
+</resources>

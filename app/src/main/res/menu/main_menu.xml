@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="App">
+        <menu>
+            <item
+                android:id="@+id/trainingplane"
+                android:title="Trainning plans" />
+            <item android:title="@string/Discovery" />
+        </menu>
+    </item>
+    <item android:title="@string/Setting"
+        android:icon="@drawable/icon_setting">
+        <menu>
+            <item android:title="@string/Language" />
+            <item android:id="@+id/darkmode_switch"
+                android:title="@string/darkmode"
+                app:actionViewClass="android.widget.Switch"
+                android:orderInCategory="80"
+                app:showAsAction="always" />
+        </menu>
+    </item>
+    <item android:title="@string/Setting"
+        android:icon="@drawable/icon_setting">
+        <menu>
+            <item android:id="@+id/LogOut"
+                android:title="@string/Logout"
+                android:icon="@mipmap/logout"
+                android:iconTintMode="src_in"
+                />
+        </menu>
+    </item>
+
+
+
+</menu>
